@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">SofaScoreAcademy4</string>
+    <string name="create_title">Create</string>
+    <string name="show_title">Show</string>
+
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="founder">Founder</string>
+    <string name="email">Email</string>
+    <string name="website">Website</string>
+    <string name="city">City</string>
+    <string name="slogan">Slogan</string>
+    <string name="yearFounded">Foundation year</string>
+    <string name="country">Country</string>
+    <string name="industry">Industry</string>
+    <string name="description">Description</string>
+
+    <string name="create_button">Create</string>
+
+    <string name="create_company_title">Create a company</string>
+
+    <string name="company_public">Public</string>
+    <string name="company_private">Private</string>
+    <string name="company_type">Company type</string>
+
+    <string name="success_message">Hurray, You successfully added new company!</string>
+
+    <string name="error_name">Please fill in name field!</string>
+    <string name="error_address">Please fill in address field!</string>
+    <string name="error_city">Please fill in city field!</string>
+    <string name="error_country">Please fill in country field!</string>
+    <string name="error_founder">Please fill in founder field!</string>
+    <string name="error_email">Please fill in email field!</string>
+    <string name="error_website">Please fill in website field!</string>
+    <string name="error_desc">Please fill in description field!</string>
+    <string name="error_slogan">Please fill in slogan field!</string>
+    <string name="error_foundation_year">Please enter year from 1500 to 2023!</string>
+
+    <string name="error_fill_all">Please fill out all fields to continue!</string>
+</resources>
