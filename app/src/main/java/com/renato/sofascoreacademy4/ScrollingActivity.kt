@@ -29,9 +29,6 @@ class ScrollingActivity : AppCompatActivity() {
             transformations(CircleCropTransformation())
             placeholder(R.drawable.elon_musk)
         }
-        binding.toolbarLayout.setOnClickListener{
-            Snackbar.make(binding.root.rootView, resources.getString(R.string.easter_egg), Snackbar.LENGTH_SHORT).show()
-        }
         setText()
 
     }
