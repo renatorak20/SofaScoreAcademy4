@@ -10,16 +10,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.renato.sofascoreacademy4.R
+import com.renato.sofascoreacademy4.adapters.CompanyRecyclerAdapter
 import com.renato.sofascoreacademy4.databinding.FragmentShowCompaniesBinding
 import com.renato.sofascoreacademy4.entities.Company
 
 class ShowCompaniesFragment : Fragment() {
 
     private lateinit var viewModel: CompanyViewModel
-    private lateinit var listView: ListView
     private lateinit var binding: FragmentShowCompaniesBinding
-    private lateinit var adapter:ArrayAdapter<Company>
-    private lateinit var recyclerView:RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,11 +27,9 @@ class ShowCompaniesFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity())[CompanyViewModel::class.java]
 
         binding = FragmentShowCompaniesBinding.inflate(inflater, container, false)
-        recyclerView = binding.recyclerView
-
-        //adapter = ArrayAdapter(requireContext(), R.layout.company_object, viewModel.companies.value ?: mutableListOf())
-
-
+        binding.recyclerView.adapter = CompanyRecyclerAdapter(requireContext(),
+            (viewModel.companies.value as ArrayList<Company>)
+        )
         return binding.root
     }
 
@@ -41,8 +37,9 @@ class ShowCompaniesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.getList().observe(viewLifecycleOwner) {
-            //adapter = ArrayAdapter(requireContext(), R.layout.company_object, viewModel.companies.value ?: mutableListOf())
-            //listView.adapter = adapter
+            binding.recyclerView.adapter = CompanyRecyclerAdapter(requireContext(),
+                (viewModel.companies.value as ArrayList<Company>)
+            )
         }
     }
 }

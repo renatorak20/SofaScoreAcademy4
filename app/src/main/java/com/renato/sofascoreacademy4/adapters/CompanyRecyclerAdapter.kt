@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import coil.transform.CircleCropTransformation
 import com.renato.sofascoreacademy4.R
 import com.renato.sofascoreacademy4.databinding.CompanyObjectBinding
 import com.renato.sofascoreacademy4.entities.Company
@@ -26,6 +28,11 @@ class CompanyRecyclerAdapter(val context:Context, val listOfItems:ArrayList<Comp
         holder.binding.nameText.text = company.name
         holder.binding.addressText.text = company.address
         holder.binding.cityText.text = company.city
+        holder.binding.imageView.load(company.website){
+            transformations(CircleCropTransformation())
+            crossfade(true)
+            crossfade(100)
+        }
     }
 
     override fun getItemCount() = listOfItems.size
