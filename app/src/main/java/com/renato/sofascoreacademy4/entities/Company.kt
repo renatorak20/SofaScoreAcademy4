@@ -1,5 +1,7 @@
 package com.renato.sofascoreacademy4.entities
 
+import java.io.Serializable
+
 class Company(
      val name: String,
      val address: String,
@@ -12,7 +14,7 @@ class Company(
      val yearFounded: Int,
      val industry: Industry,
      val type:String
-){
+): Serializable{
 
     override fun toString(): String {
         return "Company -- " +
