@@ -14,6 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.renato.sofascoreacademy4.databinding.ActivityMainBinding
+import com.renato.sofascoreacademy4.util.Preferences
 import java.util.*
 
 
@@ -46,34 +47,7 @@ class MainActivity : AppCompatActivity() {
             systemUiVisibility = View.SYSTEM_UI_FLAG_LOW_PROFILE
         }
 
-        loadPreference()
+        Preferences().loadPreference(this)
     }
 
-    fun loadPreference(){
-
-        val preferences = this.getSharedPreferences("com.renato.sofascoreacademy4", Context.MODE_PRIVATE)
-
-        when(preferences.getString("theme", "none")){
-            "dark" -> {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            }
-            else -> {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            }
-        }
-
-        when(preferences.getString("lang", "none")){
-            "en" ->{
-                setAppLocale("en")
-            }
-            "hr" ->{
-                setAppLocale("hr")
-            }
-        }
-    }
-
-    fun setAppLocale(language: String) {
-        val appLocale: LocaleListCompat = LocaleListCompat.forLanguageTags(language)
-        AppCompatDelegate.setApplicationLocales(appLocale)
-    }
 }

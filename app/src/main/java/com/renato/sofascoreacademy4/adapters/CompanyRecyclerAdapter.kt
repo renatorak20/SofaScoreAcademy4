@@ -40,21 +40,19 @@ class CompanyRecyclerAdapter(val context:Context, private val listOfItems:ArrayL
         holder.binding.cityText.text = company.city
 
         holder.binding.imageView.load(company.website){
+            placeholder(R.drawable.elon_musk)
             transformations(CircleCropTransformation())
-            fallback(R.drawable.elon_musk)
         }
 
         holder.binding.layout.setBackgroundColor(Color.argb(100, Random.nextInt(256), Random.nextInt(256), Random.nextInt(256)))
 
         holder.binding.layout.isClickable = true
-
         holder.binding.layout.setOnClickListener{
             val scrollingActivity = Intent(context, ScrollingActivity::class.java).putExtra("extra", listOfItems[position])
             context.startActivity(scrollingActivity)
         }
 
         holder.binding.layout.animation = AnimationUtils.loadAnimation(context, R.anim.recycler_view_element_anim)
-
     }
 
     override fun getItemCount() = listOfItems.size

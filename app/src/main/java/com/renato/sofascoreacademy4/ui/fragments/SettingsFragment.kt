@@ -13,6 +13,7 @@ import androidx.core.os.LocaleListCompat
 import androidx.fragment.app.Fragment
 import com.renato.sofascoreacademy4.MainActivity
 import com.renato.sofascoreacademy4.databinding.FragmentSettingsBinding
+import com.renato.sofascoreacademy4.util.Preferences
 import java.util.*
 
 
@@ -55,7 +56,7 @@ class SettingsFragment : Fragment() {
                 preferences.edit().putString("lang", "en").apply()
             }
 
-            setAppLocale(preferences.getString("lang", "en").toString())
+            Preferences().setAppLocale(preferences.getString("lang", "en").toString())
         }
     }
 
@@ -86,8 +87,4 @@ class SettingsFragment : Fragment() {
         }
     }
 
-    fun setAppLocale(language: String) {
-        val appLocale: LocaleListCompat = LocaleListCompat.forLanguageTags(language)
-        AppCompatDelegate.setApplicationLocales(appLocale)
-    }
 }

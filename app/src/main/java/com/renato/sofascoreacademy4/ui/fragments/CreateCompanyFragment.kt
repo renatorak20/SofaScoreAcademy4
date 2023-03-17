@@ -90,10 +90,8 @@ class CreateCompanyFragment : Fragment() {
                     "We work on a lot of things.", 2008, Industry.Technology, "Private")
             )
 
-            if(viewModel.companies.value!!.isEmpty()){
-                for(comp in demoCompanies){
-                    viewModel.addCompany(comp)
-                }
+            if(viewModel.companies.value?.isEmpty() == true){
+                viewModel.addCompanies(demoCompanies)
             }else{
                 viewModel.nukeViewModel()
             }

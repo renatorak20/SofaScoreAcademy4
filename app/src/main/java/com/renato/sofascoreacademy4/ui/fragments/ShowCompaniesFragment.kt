@@ -43,9 +43,10 @@ class ShowCompaniesFragment : Fragment() {
         binding.recyclerView.visibility = View.GONE
 
         viewModel.getList().observe(viewLifecycleOwner) {
+
             binding.recyclerView.adapter = CompanyRecyclerAdapter(requireContext(),
-                (viewModel.companies.value as ArrayList<Company>)
-            )
+                (viewModel.companies.value as ArrayList<Company>))
+
             if(viewModel.getList().value!!.isNotEmpty()){
                 binding.recyclerView.visibility = View.VISIBLE
                 binding.animationView.visibility = View.GONE
@@ -55,7 +56,5 @@ class ShowCompaniesFragment : Fragment() {
         binding.animationView.setOnClickListener{
             Snackbar.make(binding.root.rootView, resources.getString(R.string.companies_empty), Snackbar.LENGTH_SHORT).show()
         }
-
-
     }
 }

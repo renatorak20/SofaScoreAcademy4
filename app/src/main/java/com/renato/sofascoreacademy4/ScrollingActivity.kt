@@ -28,6 +28,7 @@ class ScrollingActivity : AppCompatActivity() {
             transformations(CircleCropTransformation())
             placeholder(R.drawable.elon_musk)
         }
+
         setText()
 
     }
