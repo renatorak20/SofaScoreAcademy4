@@ -17,4 +17,10 @@
         android:label="@string/show_title"
         tools:layout="@layout/fragment_show_companies" />
 
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.renato.sofascoreacademy4.ui.fragments.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_show_companies" />
+
 </navigation>

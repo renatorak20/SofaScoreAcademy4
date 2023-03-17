@@ -71,4 +71,5 @@
     <color name="md_theme_dark_scrim">#000000</color>
 
     <color name="status_bar">#7d6115</color>
+    <color name="switch_grey">#808080</color>
 </resources>

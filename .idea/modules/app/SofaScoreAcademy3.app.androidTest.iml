@@ -23,6 +23,7 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/2834b617cce509873bf5820cad218b7a/transformed/navigation-ui-2.5.3-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/3675e6f8e105f2d0a25bc6b980f47025/transformed/material-1.8.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/d1341d1a9f911818a3d900db7e5fc970/transformed/lottie-3.4.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/5890c4dda48322fe31d050b7bdb65329/transformed/preference-1.2.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/425189aa6c0606b614e77de8efa72678/transformed/appcompat-1.6.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/92901ae2195021e549e14e028fe2139f/transformed/viewpager2-1.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/e50140944428ea6055055d7f97c8d85f/transformed/navigation-fragment-ktx-2.5.3-api.jar</arg>
@@ -53,8 +54,8 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/1f38daca88ba541313f8e2e8f972be71/transformed/transition-1.2.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/0a45c02b3ceccd4fab388c39ae62e330/transformed/vectordrawable-animated-1.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/ef0417b34ac913c91a2973e62ba7e3d4/transformed/vectordrawable-1.1.0-api.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/58b9e9c0bc19dbebebd5678d64b655e2/transformed/recyclerview-1.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/cac40acf32adc453cb5cca099d8e58aa/transformed/slidingpanelayout-1.2.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/58b9e9c0bc19dbebebd5678d64b655e2/transformed/recyclerview-1.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/64a4cbde56bdbd37f79a6341266d03a2/transformed/viewpager-1.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/2f1df6d62b0f42456551214e69631950/transformed/customview-1.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/53ec722a33c28d941d5a00f9fde49645/transformed/core-1.9.0-api.jar</arg>
@@ -272,6 +273,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-common-ktx:2.5.3@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-ui-ktx:2.5.3@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-ui:2.5.3@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.preference:preference:1.2.0@aar" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="SofaScoreAcademy3.app.main" />
 </module>

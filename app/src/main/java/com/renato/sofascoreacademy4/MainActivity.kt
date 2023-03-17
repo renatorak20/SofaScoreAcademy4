@@ -1,10 +1,13 @@
 package com.renato.sofascoreacademy4
 
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.ActionBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.ui.graphics.Color
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
@@ -28,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_create, R.id.navigation_show
+                R.id.navigation_create, R.id.navigation_show, R.id.navigation_settings
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -40,6 +43,22 @@ class MainActivity : AppCompatActivity() {
 
         window.decorView.apply {
             systemUiVisibility = View.SYSTEM_UI_FLAG_LOW_PROFILE
+        }
+
+        setTheme()
+    }
+
+    fun setTheme(){
+
+        val preferences = this.getSharedPreferences("com.renato.sofascoreacademy4", Context.MODE_PRIVATE)
+
+        when(preferences.getString("theme", "none")){
+            "dark" -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+            else -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
         }
     }
 }
