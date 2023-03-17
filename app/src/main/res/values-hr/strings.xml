@@ -17,8 +17,15 @@
     <string name="industry">Industrija</string>
     <string name="description">Opis</string>
     <string name="type">Tip</string>
+    <string name="fillEmpty">Napuni/Isprazni listu</string>
 
     <string name="create_company_title">Stvori tvrtku</string>
+
+    <string name="healthcare">Zdravstvo</string>
+    <string name="technology">Tehnologija</string>
+    <string name="finance">Financije</string>
+    <string name="retail">Maloprodaja</string>
+    <string name="other">Ostalo</string>
 
     <string name="company_public">Javno</string>
     <string name="company_private">Privatno</string>

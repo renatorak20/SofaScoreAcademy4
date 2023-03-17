@@ -133,15 +133,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="200dp"
             android:padding="15dp"
             android:text="@string/create_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
 
-
+        <Button
+            android:id="@+id/fillEmptyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="100dp"
+            android:padding="15dp"
+            android:text="@string/fillEmpty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

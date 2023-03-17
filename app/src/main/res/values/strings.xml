@@ -15,9 +15,16 @@
     <string name="industry">Industry</string>
     <string name="description">Description</string>
     <string name="type">Type</string>
+    <string name="fillEmpty">Fill/Empty list</string>
 
 
     <string name="create_company_title">Create a company</string>
+
+    <string name="healthcare">Healthcare</string>
+    <string name="technology">Technology</string>
+    <string name="finance">Finance</string>
+    <string name="retail">Retail</string>
+    <string name="other">Other</string>
 
     <string name="company_public">Public</string>
     <string name="company_private">Private</string>

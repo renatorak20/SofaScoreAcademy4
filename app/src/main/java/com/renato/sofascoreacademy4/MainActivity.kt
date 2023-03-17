@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.os.LocaleListCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -63,20 +64,16 @@ class MainActivity : AppCompatActivity() {
 
         when(preferences.getString("lang", "none")){
             "en" ->{
-                setAppLocale(this, "en")
+                setAppLocale("en")
             }
             "hr" ->{
-                setAppLocale(this, "hr")
+                setAppLocale("hr")
             }
         }
     }
 
-    fun setAppLocale(context: Context, language: String) {
-        val locale = Locale(language)
-        Locale.setDefault(locale)
-        val config = context.resources.configuration
-        config.setLocale(locale)
-        context.createConfigurationContext(config)
-        context.resources.updateConfiguration(config, context.resources.displayMetrics)
+    fun setAppLocale(language: String) {
+        val appLocale: LocaleListCompat = LocaleListCompat.forLanguageTags(language)
+        AppCompatDelegate.setApplicationLocales(appLocale)
     }
 }

@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.os.LocaleListCompat
 import androidx.fragment.app.Fragment
 import com.renato.sofascoreacademy4.MainActivity
 import com.renato.sofascoreacademy4.databinding.FragmentSettingsBinding
@@ -54,17 +55,10 @@ class SettingsFragment : Fragment() {
                 preferences.edit().putString("lang", "en").apply()
             }
 
-            refresh()
-
+            setAppLocale(preferences.getString("lang", "en").toString())
         }
     }
 
-    fun refresh(){
-        setAppLocale(requireContext(), preferences.getString("lang", "en").toString())
-        val intent = requireActivity().intent
-        activity?.finish()
-        startActivity(intent)
-    }
 
     fun loadAppPreferenes(){
         when(preferences.getString("theme", "none")){
@@ -92,12 +86,8 @@ class SettingsFragment : Fragment() {
         }
     }
 
-    fun setAppLocale(context: Context, language: String) {
-        val locale = Locale(language)
-        Locale.setDefault(locale)
-        val config = context.resources.configuration
-        config.setLocale(locale)
-        context.createConfigurationContext(config)
-        context.resources.updateConfiguration(config, context.resources.displayMetrics)
+    fun setAppLocale(language: String) {
+        val appLocale: LocaleListCompat = LocaleListCompat.forLanguageTags(language)
+        AppCompatDelegate.setApplicationLocales(appLocale)
     }
 }
