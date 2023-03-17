@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">SofaScoreAcademy4</string>
+    <string name="app_name" translatable="false">SofaScoreAcademy4</string>
     <string name="create_title">Create</string>
     <string name="show_title">Show</string>
 
@@ -16,7 +16,6 @@
     <string name="description">Description</string>
     <string name="type">Type</string>
 
-    <string name="create_button">Create</string>
 
     <string name="create_company_title">Create a company</string>
 

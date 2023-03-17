@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">SofaScoreAcademy4</string>
+    <string name="create_title">Stvori</string>
+    <string name="show_title">Prikaži</string>
+
+    <string name="name">Naziv</string>
+    <string name="address">Adresa</string>
+    <string name="founder">Osnivač</string>
+    <string name="email">Email</string>
+    <string name="website">Stranica</string>
+    <string name="city">Grad</string>
+    <string name="slogan">Slogan</string>
+    <string name="yearFounded">Godina osnivanja</string>
+    <string name="country">Država</string>
+    <string name="industry">Industrija</string>
+    <string name="description">Opis</string>
+    <string name="type">Tip</string>
+
+    <string name="create_company_title">Stvori tvrtku</string>
+
+    <string name="company_public">Javno</string>
+    <string name="company_private">Privatno</string>
+    <string name="company_type">Tip tvrtke</string>
+
+    <string name="success_message">Tooo, uspješno si dodao novu tvrtku!</string>
+
+    <string name="error_name">Molimo ispuni polje za ime!</string>
+    <string name="error_address">Molimo ispuni polje za adresu!</string>
+    <string name="error_city">Molimo ispuni polje za grad!</string>
+    <string name="error_country">Molimo ispuni polje za državu!</string>
+    <string name="error_founder">Molimo ispuni polje za osnivača!</string>
+    <string name="error_email">Molimo ispuni polje za email!</string>
+    <string name="error_website">Molimo ispuni polje za stranicu!</string>
+    <string name="error_desc">Molimo ispuni polje za opis!</string>
+    <string name="error_slogan">Molimo ispuni polje za slogan!</string>
+    <string name="error_foundation_year">Molimo unesi godinu između 1500 i 2023!</string>
+
+    <string name="error_fill_all">Ispunite sva polja važećim podacima za nastavak!</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="action_settings">Postavke</string>
+
+    <string name="companies_empty">Nemaš dodanih tvrtki!</string>
+
+    <string name="settings">Postavke</string>
+    <string name="dark_theme">Tamni način</string>
+    <string name="language">Jezik</string>
+
+</resources>
