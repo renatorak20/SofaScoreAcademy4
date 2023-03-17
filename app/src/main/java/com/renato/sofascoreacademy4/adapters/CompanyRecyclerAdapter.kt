@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.CircleCropTransformation
@@ -38,6 +39,7 @@ class CompanyRecyclerAdapter(val context:Context, val listOfItems:ArrayList<Comp
             transformations(CircleCropTransformation())
             fallback(R.drawable.elon_musk)
         }
+
         //smanjio sam alpha da boje ne budu jako izrazene
         holder.binding.layout.setBackgroundColor(Color.argb(100, Random.nextInt(256), Random.nextInt(256), Random.nextInt(256)))
 
@@ -47,6 +49,8 @@ class CompanyRecyclerAdapter(val context:Context, val listOfItems:ArrayList<Comp
             val scrollingActivity = Intent(context, ScrollingActivity::class.java).putExtra("extra", listOfItems[position])
             context.startActivity(scrollingActivity)
         }
+
+        holder.binding.layout.animation = AnimationUtils.loadAnimation(context, R.anim.recycler_view_element_anim)
 
     }
 

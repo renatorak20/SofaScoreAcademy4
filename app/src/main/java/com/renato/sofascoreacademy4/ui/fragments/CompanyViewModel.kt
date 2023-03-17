@@ -10,7 +10,7 @@ class CompanyViewModel : ViewModel() {
     private val _companies = MutableLiveData<List<Company>>()
     val companies : LiveData<List<Company>> = _companies
 
-    val demoCompanies = listOf<Company>(
+    private val demoCompanies = listOf(
         Company("Sofascore", "Vrbani 4", "Zagreb", "Croatia", "Zlatko Hrkac & Ivan Beslic", "marketing@sofascore.com",
             "https://media.licdn.com/dms/image/C4D0BAQEFe9Kh-YDJ7w/company-logo_200_200/0/1669205795409?e=1686787200&v=beta&t=urJl2rwozSzfc0LQeviE7tz_O5WJSUfJ49WIY9VES7c",
             "Sofascore has everything a sports fan needs – the fastest live score and superdetailed statistics for 23 sports.", 2010, Industry.Technology, "Private"),
@@ -51,7 +51,7 @@ class CompanyViewModel : ViewModel() {
 
     init {
         for(company in demoCompanies){
-            //addCompany(company)
+            addCompany(company)
         }
     }
 
