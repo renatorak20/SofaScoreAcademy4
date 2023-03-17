@@ -10,7 +10,7 @@ class CompanyViewModel : ViewModel() {
     private val _companies = MutableLiveData<List<Company>>()
     val companies : LiveData<List<Company>> = _companies
 
-    init {
+    init{
         _companies.value = mutableListOf()
     }
 
@@ -21,7 +21,7 @@ class CompanyViewModel : ViewModel() {
     }
 
     fun addCompanies(companies: List<Company>){
-        _companies.value = companies
+        _companies.value = companies.toMutableList()
     }
 
     fun getList(): MutableLiveData<List<Company>> {
