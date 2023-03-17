@@ -5,16 +5,16 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.ActionBar
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.compose.ui.graphics.Color
-import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.renato.sofascoreacademy4.databinding.ActivityMainBinding
+import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,10 +45,10 @@ class MainActivity : AppCompatActivity() {
             systemUiVisibility = View.SYSTEM_UI_FLAG_LOW_PROFILE
         }
 
-        setTheme()
+        loadPreference()
     }
 
-    fun setTheme(){
+    fun loadPreference(){
 
         val preferences = this.getSharedPreferences("com.renato.sofascoreacademy4", Context.MODE_PRIVATE)
 
@@ -60,5 +60,23 @@ class MainActivity : AppCompatActivity() {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
         }
+
+        when(preferences.getString("lang", "none")){
+            "en" ->{
+                setAppLocale(this, "en")
+            }
+            "hr" ->{
+                setAppLocale(this, "hr")
+            }
+        }
+    }
+
+    fun setAppLocale(context: Context, language: String) {
+        val locale = Locale(language)
+        Locale.setDefault(locale)
+        val config = context.resources.configuration
+        config.setLocale(locale)
+        context.createConfigurationContext(config)
+        context.resources.updateConfiguration(config, context.resources.displayMetrics)
     }
 }

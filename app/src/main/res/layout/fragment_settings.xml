@@ -47,4 +47,48 @@
             app:thumbIcon="@drawable/ic_baseline_dark_mode_24"/>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:text="@string/language"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp">
+
+            <ImageView
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/uk_flag"
+                android:layout_marginEnd="0dp"
+                />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/languageSwitch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="false"
+                app:thumbIconTint="@color/md_theme_dark_secondary"
+                app:trackTint="@color/switch_grey" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/croatian_flag" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 </LinearLayout>

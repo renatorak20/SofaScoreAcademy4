@@ -51,7 +51,7 @@ class CompanyViewModel : ViewModel() {
 
     init {
         for(company in demoCompanies){
-            addCompany(company)
+            //addCompany(company)
         }
     }
 

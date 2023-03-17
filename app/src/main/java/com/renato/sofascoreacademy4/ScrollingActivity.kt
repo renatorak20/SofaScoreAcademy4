@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
 import coil.transform.CircleCropTransformation
-import com.google.android.material.snackbar.Snackbar
 import com.renato.sofascoreacademy4.databinding.ActivityScrollingBinding
 import com.renato.sofascoreacademy4.entities.Company
 
