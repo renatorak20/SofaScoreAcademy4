@@ -4,6 +4,7 @@
     <string name="app_name" translatable="false">SofaScoreAcademy4</string>
     <string name="create_title">Stvori</string>
     <string name="show_title">Prikaži</string>
+    <string name="settings">Postavke</string>
 
     <string name="name">Naziv</string>
     <string name="address">Adresa</string>
@@ -50,7 +51,7 @@
 
     <string name="companies_empty">Nemaš dodanih tvrtki!</string>
 
-    <string name="settings">Postavke</string>
+
     <string name="dark_theme">Tamni način</string>
     <string name="language">Jezik</string>
 

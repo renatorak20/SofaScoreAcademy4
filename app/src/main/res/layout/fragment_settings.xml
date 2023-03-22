@@ -11,7 +11,8 @@
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -22,73 +23,71 @@
 
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:layout_marginBottom="20dp">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/dark_theme"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@+id/themeSwitch"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="0dp"/>
+            android:textSize="20sp" />
 
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/themeSwitch"
+        <FrameLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="70dp"
             android:layout_weight="1"
-            android:checked="false"
-            app:thumbIconTint="@color/md_theme_dark_secondary"
-            app:trackTint="@color/switch_grey"
-            app:thumbIcon="@drawable/ic_baseline_dark_mode_24"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_height="match_parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/themeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:layout_gravity="center"
+                app:thumbIcon="@drawable/ic_baseline_dark_mode_24"
+                app:thumbIconTint="@color/md_theme_dark_secondary"
+                app:trackTint="@color/switch_grey" />
+        </FrameLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:layout_marginBottom="20dp">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/language"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="0dp" />
+            android:textSize="20sp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <ImageView
                 android:layout_width="68dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="0dp"
-                android:src="@drawable/uk_flag" />
+                android:src="@drawable/uk_flag"/>
 
             <com.google.android.material.materialswitch.MaterialSwitch
                 android:id="@+id/languageSwitch"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:checked="false"
                 app:thumbIconTint="@color/md_theme_dark_secondary"
                 app:trackTint="@color/switch_grey" />
@@ -100,6 +99,7 @@
 
         </LinearLayout>
 
+        </FrameLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </LinearLayout>
