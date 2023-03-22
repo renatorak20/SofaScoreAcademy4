@@ -1,7 +1,6 @@
 package com.renato.sofascoreacademy4.ui.fragments
 
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Bundle
@@ -9,12 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.os.LocaleListCompat
 import androidx.fragment.app.Fragment
-import com.renato.sofascoreacademy4.MainActivity
+import com.renato.sofascoreacademy4.R
 import com.renato.sofascoreacademy4.databinding.FragmentSettingsBinding
 import com.renato.sofascoreacademy4.util.Preferences
-import java.util.*
 
 
 class SettingsFragment : Fragment() {
@@ -22,14 +19,22 @@ class SettingsFragment : Fragment() {
     private lateinit var binding:FragmentSettingsBinding
     private lateinit var preferences: SharedPreferences
 
+    private lateinit var extras:List<String>
+    private lateinit var extrasLang:List<String>
+    private lateinit var extrasThemes:List<String>
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
-        preferences = requireActivity().getSharedPreferences("com.renato.sofascoreacademy4", Context.MODE_PRIVATE)
+        preferences = requireActivity().getSharedPreferences(resources.getString(R.string.package_name), Context.MODE_PRIVATE)
 
         binding = FragmentSettingsBinding.inflate(layoutInflater)
+
+        extras = resources.getStringArray(R.array.extra).toList()
+        extrasLang = resources.getStringArray(R.array.languages).toList()
+        extrasThemes = resources.getStringArray(R.array.themes).toList()
 
         return binding.root
     }
@@ -41,33 +46,33 @@ class SettingsFragment : Fragment() {
         binding.themeSwitch.setOnCheckedChangeListener{
                 _, isChecked ->
             if(isChecked){
-                preferences.edit().putString("theme", "dark").apply()
+                preferences.edit().putString(extrasThemes[0], extrasThemes[2]).apply()
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             }else{
-                preferences.edit().putString("theme", "light").apply()
+                preferences.edit().putString(extrasThemes[0], extrasThemes[1]).apply()
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
         }
 
         binding.languageSwitch.setOnCheckedChangeListener { _, isChecked ->
             if(isChecked){
-                preferences.edit().putString("lang", "hr").apply()
+                preferences.edit().putString(extrasLang[0], extrasLang[2]).apply()
             }else{
-                preferences.edit().putString("lang", "en").apply()
+                preferences.edit().putString(extrasLang[0], extrasLang[1]).apply()
             }
 
-            Preferences().setAppLocale(preferences.getString("lang", "en").toString())
+            Preferences().setAppLocale(preferences.getString(extrasLang[0], extrasLang[1]).toString())
         }
     }
 
 
     fun loadAppPreferenes(){
-        when(preferences.getString("theme", "none")){
-            "none" -> {
+        when(preferences.getString(extrasThemes[0], extras[1])){
+            extras[1] -> {
                 val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
                 binding.themeSwitch.isChecked = currentNightMode == Configuration.UI_MODE_NIGHT_YES
             }
-            "dark" -> {
+            extrasThemes[2] -> {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 binding.themeSwitch.isChecked = true
             }
@@ -77,8 +82,8 @@ class SettingsFragment : Fragment() {
             }
         }
 
-        when(preferences.getString("lang", "none")){
-            "en" -> {
+        when(preferences.getString(extrasLang[0], extras[1])){
+            extrasLang[1] -> {
                 binding.languageSwitch.isChecked = false
             }
             else -> {
@@ -86,5 +91,4 @@ class SettingsFragment : Fragment() {
             }
         }
     }
-
 }

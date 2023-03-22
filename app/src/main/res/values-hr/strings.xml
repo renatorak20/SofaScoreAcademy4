@@ -54,4 +54,5 @@
     <string name="dark_theme">Tamni način</string>
     <string name="language">Jezik</string>
 
+    <string name="package_name">com.renato.sofascoreacademy4</string>
 </resources>

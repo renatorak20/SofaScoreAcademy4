@@ -18,7 +18,7 @@ class ScrollingActivity : AppCompatActivity() {
         binding = ActivityScrollingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        company = intent.getSerializableExtra("extra") as Company
+        company = intent.getSerializableExtra(resources.getStringArray(R.array.extra)[0]) as Company
 
         binding.fab.setOnClickListener {
             finish()

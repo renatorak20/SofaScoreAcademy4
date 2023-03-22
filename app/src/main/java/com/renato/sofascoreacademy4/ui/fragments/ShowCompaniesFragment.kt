@@ -54,7 +54,7 @@ class ShowCompaniesFragment : Fragment() {
         }
 
         binding.animationView.setOnClickListener{
-            Snackbar.make(binding.root.rootView, resources.getString(R.string.companies_empty), Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(binding.root, resources.getString(R.string.companies_empty), Snackbar.LENGTH_SHORT).show()
         }
     }
 }

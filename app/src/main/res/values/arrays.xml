@@ -1,5 +1,4 @@
-<resources>
-    <!-- Reply Preference -->
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string-array name="reply_entries">
         <item>Reply</item>
         <item>Reply to all</item>
@@ -9,4 +8,22 @@
         <item>reply</item>
         <item>reply_all</item>
     </string-array>
+
+    <string-array name="extra">
+        <item>extra</item>
+        <item>none</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>lang</item>
+        <item>en</item>
+        <item>hr</item>
+    </string-array>
+
+    <string-array name="themes">
+        <item>theme</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+
 </resources>

@@ -31,8 +31,6 @@ class CompanyRecyclerAdapter(val context:Context, private val listOfItems:ArrayL
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
 
-        //lottie animation is shown when recycler view is empty
-
         val company = listOfItems[position]
 
         holder.binding.nameText.text = company.name
@@ -48,7 +46,7 @@ class CompanyRecyclerAdapter(val context:Context, private val listOfItems:ArrayL
 
         holder.binding.layout.isClickable = true
         holder.binding.layout.setOnClickListener{
-            val scrollingActivity = Intent(context, ScrollingActivity::class.java).putExtra("extra", listOfItems[position])
+            val scrollingActivity = Intent(context, ScrollingActivity::class.java).putExtra(context.resources.getStringArray(R.array.extra)[0], listOfItems[position])
             context.startActivity(scrollingActivity)
         }
 

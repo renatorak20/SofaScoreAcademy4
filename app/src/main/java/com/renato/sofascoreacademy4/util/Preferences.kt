@@ -4,15 +4,22 @@ import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.LocaleListCompat
+import com.renato.sofascoreacademy4.R
 
 class Preferences {
 
+
     fun loadPreference(activity:Activity){
 
-        val preferences = activity.getSharedPreferences("com.renato.sofascoreacademy4", Context.MODE_PRIVATE)
+        val resources = activity.resources
+        val extras = resources.getStringArray(R.array.extra)
+        val extrasLang = resources.getStringArray(R.array.languages)
+        val extrasThemes = resources.getStringArray(R.array.themes)
 
-        when(preferences.getString("theme", "none")){
-            "dark" -> {
+        val preferences = activity.getSharedPreferences(resources.getString(R.string.package_name), Context.MODE_PRIVATE)
+
+        when(preferences.getString(extrasThemes[0], extras[1])){
+            extrasThemes[2] -> {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             }
             else -> {
@@ -20,12 +27,12 @@ class Preferences {
             }
         }
 
-        when(preferences.getString("lang", "none")){
-            "en" ->{
-                setAppLocale("en")
+        when(preferences.getString(extrasLang[0], extras[1])){
+            extrasLang[1] ->{
+                setAppLocale(extrasLang[1])
             }
-            "hr" ->{
-                setAppLocale("hr")
+            extrasLang[2] ->{
+                setAppLocale(extrasLang[2])
             }
         }
     }
