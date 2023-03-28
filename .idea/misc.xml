@@ -15,9 +15,19 @@
         <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy3/app/src/main/res/layout/user_input_text.xml" value="0.1" />
         <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy3/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
         <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy3/app/src/main/res/menu/spinner.xml" value="0.1" />
-        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout/company_object.xml" value="0.5474339035769828" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.11746987951807229" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.205859375" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout/activity_scrolling.xml" value="0.5" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout/company_object.xml" value="0.1" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout/content_scrolling.xml" value="0.33" />
         <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout/custom_toolbar.xml" value="0.33" />
-        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout/fragment_show_companies.xml" value="0.1" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout/empty_toolbar.xml" value="0.3211050724637681" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout/fragment_create_company.xml" value="0.21875" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout/fragment_settings.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout/fragment_show_companies.xml" value="0.33" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/layout/language_switch.xml" value="0.67" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy4/app/src/main/res/xml/root_preferences.xml" value="0.33" />
       </map>
     </option>
   </component>

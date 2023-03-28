@@ -1,7 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">SofaScoreAcademy4</string>
+    <string name="app_name" translatable="false">SofaScoreAcademy4</string>
     <string name="create_title">Create</string>
     <string name="show_title">Show</string>
+    <string name="settings">Settings</string>
 
     <string name="name">Name</string>
     <string name="address">Address</string>
@@ -14,10 +15,17 @@
     <string name="country">Country</string>
     <string name="industry">Industry</string>
     <string name="description">Description</string>
+    <string name="type">Type</string>
+    <string name="fillEmpty">Fill/Empty list</string>
 
-    <string name="create_button">Create</string>
 
     <string name="create_company_title">Create a company</string>
+
+    <string name="healthcare">Healthcare</string>
+    <string name="technology">Technology</string>
+    <string name="finance">Finance</string>
+    <string name="retail">Retail</string>
+    <string name="other">Other</string>
 
     <string name="company_public">Public</string>
     <string name="company_private">Private</string>
@@ -36,5 +44,15 @@
     <string name="error_slogan">Please fill in slogan field!</string>
     <string name="error_foundation_year">Please enter year from 1500 to 2023!</string>
 
-    <string name="error_fill_all">Please fill out all fields to continue!</string>
+    <string name="error_fill_all">Please fill out all fields with valid info to continue!</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="companies_empty">You dont have any companies added!</string>
+
+
+    <string name="dark_theme">Dark theme</string>
+    <string name="language">Language</string>
+
+    <string name="package_name">com.renato.sofascoreacademy4</string>
 </resources>

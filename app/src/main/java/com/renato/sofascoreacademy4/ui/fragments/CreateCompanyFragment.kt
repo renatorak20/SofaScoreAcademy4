@@ -18,7 +18,7 @@ class CreateCompanyFragment : Fragment() {
     private lateinit var viewModel: CompanyViewModel
 
     private lateinit var constraintLayout: ConstraintLayout
-    private lateinit var spinnerAdapter: ArrayAdapter<Industry>
+    private lateinit var spinnerAdapter: ArrayAdapter<String>
 
 
     private lateinit var binding: FragmentCreateCompanyBinding
@@ -35,7 +35,8 @@ class CreateCompanyFragment : Fragment() {
 
         viewModel = ViewModelProvider(requireActivity())[CompanyViewModel::class.java]
 
-        spinnerAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, Industry.values())
+
+        spinnerAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, arrayOf(getString(R.string.healthcare), getString(R.string.technology), getString(R.string.finance), getString(R.string.retail), getString(R.string.other)))
         binding.spinner.adapter = spinnerAdapter
 
         return binding.root
@@ -46,6 +47,10 @@ class CreateCompanyFragment : Fragment() {
 
         binding.button.setOnClickListener {
             addCompany()
+        }
+
+        binding.fillEmptyButton.setOnClickListener{
+            viewModel.fillOrDestroy()
         }
     }
 
@@ -61,7 +66,7 @@ class CreateCompanyFragment : Fragment() {
                 binding.websiteField.getText(),
                 binding.descriptionField.getText(),
                 binding.foundationField.getText().toInt(),
-                binding.spinner.selectedItem as Industry,
+                Industry.values()[binding.spinner.selectedItemPosition],
                 getRadioSelectedValue())
 
             viewModel.addCompany(company)
@@ -80,6 +85,7 @@ class CreateCompanyFragment : Fragment() {
             }
         return type
     }
+
     private fun ConstraintLayout.areAllFieldsValid(): Boolean {
         this.children.filterIsInstance<CustomEditText>().forEach {
             if (!it.isValid()) {
@@ -88,6 +94,7 @@ class CreateCompanyFragment : Fragment() {
         }
         return true
     }
+
     private fun ConstraintLayout.resetFields() {
         this.children.filterIsInstance<CustomEditText>().forEach {
             it.clear()
